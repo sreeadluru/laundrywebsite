@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b315c">
+  <meta name="description" content="Ayra Laundry Services - B2B commercial laundry services for universities, colleges, schools, hospitals, hotels and restaurants in Tirupati.">
+  <title>Ayra Laundry Services | Commercial Laundry for Businesses</title>
+
+  <style>
+    :root{
+      --navy:#0b315c;
+      --blue:#123f70;
+      --teal:#198d96;
+      --light:#f4fafb;
+      --text:#18324d;
+      --muted:#617387;
+      --white:#ffffff;
+      --border:#dce8ed;
+      --shadow:0 12px 35px rgba(11,49,92,.10);
+      --radius:18px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      color:var(--text);
+      background:#fff;
+      line-height:1.6;
+    }
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,255,255,.96);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--border);
+    }
+    .nav{
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+    .brand img{
+      width:210px;
+      max-width:52vw;
+      display:block;
+    }
+    nav{display:flex;gap:26px;align-items:center}
+    nav a{font-weight:700;color:var(--navy);font-size:15px}
+    nav a:hover{color:var(--teal)}
+    .nav-cta{
+      padding:11px 18px;
+      background:var(--navy);
+      color:#fff!important;
+      border-radius:999px;
+    }
+
+    .hero{
+      background:
+        radial-gradient(circle at 85% 20%,rgba(25,141,150,.12),transparent 30%),
+        linear-gradient(135deg,#f7fcfd,#eef7fb);
+      padding:82px 0 76px;
+      overflow:hidden;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:50px;
+      align-items:center;
+    }
+    .eyebrow{
+      color:var(--teal);
+      text-transform:uppercase;
+      letter-spacing:2px;
+      font-size:13px;
+      font-weight:800;
+      margin-bottom:14px;
+    }
+    h1{
+      color:var(--navy);
+      font-size:clamp(38px,5vw,66px);
+      line-height:1.08;
+      margin-bottom:20px;
+    }
+    .hero p{
+      font-size:19px;
+      color:var(--muted);
+      max-width:680px;
+      margin-bottom:30px;
+    }
+    .buttons{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 22px;
+      border-radius:10px;
+      font-weight:800;
+      transition:.2s;
+    }
+    .btn-primary{background:var(--navy);color:#fff}
+    .btn-primary:hover{background:#072442;transform:translateY(-2px)}
+    .btn-outline{border:2px solid var(--navy);color:var(--navy)}
+    .btn-outline:hover{background:var(--navy);color:#fff}
+
+    .hero-card{
+      background:#fff;
+      padding:25px;
+      border-radius:24px;
+      box-shadow:var(--shadow);
+      border:1px solid var(--border);
+    }
+    .hero-card img{width:100%;max-width:430px;display:block;margin:auto}
+    .trust{
+      margin-top:22px;
+      padding-top:20px;
+      border-top:1px solid var(--border);
+      text-align:center;
+    }
+    .trust strong{color:var(--navy)}
+
+    section{padding:78px 0}
+    .section-head{text-align:center;max-width:760px;margin:0 auto 45px}
+    .section-head h2{
+      color:var(--navy);
+      font-size:clamp(30px,4vw,44px);
+      margin-bottom:12px;
+      line-height:1.15;
+    }
+    .section-head p{color:var(--muted);font-size:17px}
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+    .service{
+      padding:28px;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      background:#fff;
+      box-shadow:0 5px 20px rgba(11,49,92,.05);
+    }
+    .icon{
+      width:52px;height:52px;
+      display:grid;place-items:center;
+      border-radius:14px;
+      background:#e9f7f7;
+      color:var(--teal);
+      font-size:25px;
+      margin-bottom:18px;
+    }
+    .service h3{color:var(--navy);margin-bottom:8px}
+    .service p{color:var(--muted);font-size:15px}
+
+    .industries{background:var(--light)}
+    .industry-grid{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:15px;
+    }
+    .industry{
+      background:#fff;
+      padding:25px 15px;
+      text-align:center;
+      border-radius:16px;
+      border:1px solid var(--border);
+      font-weight:800;
+      color:var(--navy);
+    }
+    .industry span{display:block;font-size:28px;margin-bottom:8px}
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
+      align-items:center;
+    }
+    .about-box{
+      background:linear-gradient(135deg,var(--navy),#17527d);
+      color:#fff;
+      padding:40px;
+      border-radius:24px;
+      box-shadow:var(--shadow);
+    }
+    .about-box h3{font-size:30px;margin-bottom:15px}
+    .about-box p{color:#e7f1f7}
+    .points{display:grid;gap:16px;margin-top:24px}
+    .point{display:flex;gap:12px;align-items:flex-start}
+    .check{
+      width:25px;height:25px;flex:0 0 25px;
+      display:grid;place-items:center;
+      border-radius:50%;
+      background:#dff5f4;
+      color:var(--teal);
+      font-weight:bold;
+    }
+
+    .partner{
+      background:#f8fbfc;
+      border-top:1px solid var(--border);
+      border-bottom:1px solid var(--border);
+    }
+    .partner-card{
+      max-width:900px;
+      margin:auto;
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:34px;
+      text-align:center;
+      box-shadow:var(--shadow);
+    }
+    .partner-badge{
+      display:inline-block;
+      background:#e7f6f5;
+      color:var(--teal);
+      padding:7px 13px;
+      border-radius:999px;
+      font-weight:800;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      margin-bottom:15px;
+    }
+    .partner-card h3{color:var(--navy);font-size:27px;margin-bottom:8px}
+    .partner-card p{color:var(--muted)}
+
+    .contact{
+      background:var(--navy);
+      color:#fff;
+    }
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:45px;
+      align-items:start;
+    }
+    .contact h2{font-size:42px;line-height:1.15;margin-bottom:15px}
+    .contact-intro{color:#dce9f2;margin-bottom:25px}
+    .contact-items{display:grid;gap:15px}
+    .contact-item{
+      display:flex;gap:14px;align-items:flex-start;
+      color:#fff;
+    }
+    .contact-item .ci{
+      width:40px;height:40px;
+      display:grid;place-items:center;
+      border-radius:10px;
+      background:rgba(255,255,255,.12);
+    }
+    .contact-item small{display:block;color:#a9c1d3}
+    .contact-item a:hover{text-decoration:underline}
+    .contact-card{
+      background:#fff;
+      color:var(--text);
+      padding:30px;
+      border-radius:20px;
+    }
+    .contact-card h3{color:var(--navy);margin-bottom:8px}
+    .contact-card p{color:var(--muted);margin-bottom:20px}
+
+    footer{
+      background:#062443;
+      color:#b8cad8;
+      padding:24px 0;
+      text-align:center;
+      font-size:14px;
+    }
+    footer strong{color:#fff}
+
+    @media(max-width:850px){
+      nav{display:none}
+      .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+      .hero{padding:55px 0}
+      .hero-card{order:-1}
+      .services{grid-template-columns:1fr 1fr}
+      .industry-grid{grid-template-columns:repeat(2,1fr)}
+      section{padding:58px 0}
+    }
+    @media(max-width:560px){
+      .brand img{width:180px}
+      .services{grid-template-columns:1fr}
+      .industry-grid{grid-template-columns:1fr 1fr}
+      .hero p{font-size:17px}
+      .contact h2{font-size:34px}
+      .about-box{padding:28px}
+      .contact-card{padding:24px}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#home" class="brand">
+      <img src="ayra-logo.jpeg" alt="Ayra Laundry Services">
+    </a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#industries">Industries</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="nav-cta">Get a Quote</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">B2B Commercial Laundry Services</div>
+        <h1>Professional Laundry Solutions for Businesses</h1>
+        <p>
+          Reliable commercial laundry services for universities, colleges,
+          school hostels, hospitals, hotels and restaurants in Tirupati.
+          We help businesses keep their linen, uniforms and garments clean,
+          fresh and ready for use.
+        </p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="tel:+919941547598">Call Us</a>
+          <a class="btn btn-outline" href="mailto:ayralaundryservices@gmail.com">Request a Quote</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <img src="ayra-logo.jpeg" alt="Ayra Laundry Services logo">
+        <div class="trust">
+          <strong>Commercial Laundry for Businesses</strong><br>
+          Serving institutions and hospitality businesses with dependable laundry support.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <h2>Commercial Laundry Services</h2>
+        <p>Built around the regular laundry needs of organisations with recurring volumes.</p>
+      </div>
+
+      <div class="services">
+        <div class="service">
+          <div class="icon">👔</div>
+          <h3>Uniform Laundry</h3>
+          <p>Washing and finishing support for student, staff and institutional uniforms.</p>
+        </div>
+        <div class="service">
+          <div class="icon">🛏️</div>
+          <h3>Linen & Bedding</h3>
+          <p>Professional handling of bedsheets, pillow covers, towels and other linen.</p>
+        </div>
+        <div class="service">
+          <div class="icon">🏨</div>
+          <h3>Hospitality Laundry</h3>
+          <p>Regular laundry solutions for hotels, restaurants and hospitality operations.</p>
+        </div>
+        <div class="service">
+          <div class="icon">🏥</div>
+          <h3>Institutional Laundry</h3>
+          <p>Designed for hospitals, educational institutions and other organisations.</p>
+        </div>
+        <div class="service">
+          <div class="icon">🚚</div>
+          <h3>Scheduled Collection</h3>
+          <p>Collection and delivery schedules can be organised around your operational requirements.</p>
+        </div>
+        <div class="service">
+          <div class="icon">📋</div>
+          <h3>Custom B2B Plans</h3>
+          <p>Discuss your volume, garment types and frequency to build a suitable commercial plan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="industries" class="industries">
+    <div class="container">
+      <div class="section-head">
+        <h2>Who We Serve</h2>
+        <p>Our focus is on businesses and institutions that need dependable, recurring laundry support.</p>
+      </div>
+
+      <div class="industry-grid">
+        <div class="industry"><span>🎓</span>Universities</div>
+        <div class="industry"><span>🏫</span>Colleges</div>
+        <div class="industry"><span>🧑‍🎓</span>School Hostels</div>
+        <div class="industry"><span>🏥</span>Hospitals</div>
+        <div class="industry"><span>🏨</span>Hotels</div>
+        <div class="industry"><span>🍽️</span>Restaurants</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container about-grid">
+      <div>
+        <div class="eyebrow">Why Ayra Laundry Services</div>
+        <h2 style="font-size:42px;color:var(--navy);line-height:1.15;margin-bottom:16px;">
+          A laundry partner for high-volume operations.
+        </h2>
+        <p style="color:var(--muted);font-size:17px;">
+          Ayra Laundry Services is a Tirupati-based B2B commercial laundry
+          business focused on recurring laundry requirements for educational,
+          healthcare and hospitality organisations.
+        </p>
+
+        <div class="points">
+          <div class="point"><div class="check">✓</div><div><strong>Business-focused service</strong><br><span style="color:var(--muted)">Designed for institutional and commercial requirements.</span></div></div>
+          <div class="point"><div class="check">✓</div><div><strong>Recurring schedules</strong><br><span style="color:var(--muted)">Collection and delivery can be planned around your operations.</span></div></div>
+          <div class="point"><div class="check">✓</div><div><strong>Flexible requirements</strong><br><span style="color:var(--muted)">Discuss your garment, linen and volume requirements with our team.</span></div></div>
+        </div>
+      </div>
+
+      <div class="about-box">
+        <h3>Let's handle your laundry, so your team can focus on your business.</h3>
+        <p>
+          From hostel uniforms and student clothing to hotel linen and
+          restaurant laundry, talk to Ayra Laundry Services about a
+          commercial plan for your organisation.
+        </p>
+        <div class="buttons" style="margin-top:25px;">
+          <a class="btn" style="background:#fff;color:var(--navy);" href="tel:+919941547598">Speak to Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="partner">
+    <div class="container">
+      <div class="partner-card">
+        <div class="partner-badge">Our Partner</div>
+        <h3>Malla Reddy Deemed to be University</h3>
+        <p>
+          Ayra Laundry Services partners with Malla Reddy Deemed to be University,
+          supporting laundry requirements associated with an institution serving
+          approximately 2,000 students.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container contact-grid">
+      <div>
+        <h2>Ready to discuss your laundry requirements?</h2>
+        <p class="contact-intro">
+          Contact Ayra Laundry Services for commercial laundry enquiries,
+          service plans and quotations.
+        </p>
+
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="ci">📞</div>
+            <div><small>Phone</small><a href="tel:+919941547598">+91 99415 47598</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci">✉️</div>
+            <div><small>Email</small><a href="mailto:ayralaundryservices@gmail.com">ayralaundryservices@gmail.com</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci">📍</div>
+            <div><small>Address</small>Unit 11, Yerramareddipalem,<br>Next to Sai Krishna Plastics,<br>Tirupati 517520</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <h3>Request a Commercial Quote</h3>
+        <p>Tell us what you need and our team can discuss the right laundry arrangement for your organisation.</p>
+        <a class="btn btn-primary" style="width:100%;" href="mailto:ayralaundryservices@gmail.com?subject=Commercial%20Laundry%20Enquiry">
+          Email Ayra Laundry Services
+        </a>
+        <a class="btn btn-outline" style="width:100%;margin-top:10px;" href="https://wa.me/919941547598?text=Hello%20Ayra%20Laundry%20Services%2C%20I%20would%20like%20to%20discuss%20a%20commercial%20laundry%20requirement.">
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 <strong>Ayra Laundry Services</strong> · Commercial Laundry for Businesses · Tirupati
+  </div>
+</footer>
+
+</body>
+</html>
